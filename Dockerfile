@@ -12,5 +12,5 @@ RUN mkdir -p  /etc/supervisor.d
 ADD root/ /
 RUN ls -la /
 RUN chmod +x /start.sh
-RUN chmod +x root/scripts/start.sh    
+RUN chmod +x scripts/start.sh    
 ENTRYPOINT [ "sh" , "/start.sh" ] 
