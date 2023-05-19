@@ -9,8 +9,9 @@ RUN mkdir -p /config
 RUN mkdir -p /defaults
 RUN mkdir -p  /etc/supervisor.d 
 RUN ls -la /
+ADD root/ /
 RUN chmod +x /start.sh
 RUN chmod +x scripts/start.sh  
 RUN ls -la /  
-ADD root/ /
+#ADD root/ /
 ENTRYPOINT [ "sh" , "/start.sh" ]
