@@ -8,9 +8,9 @@ RUN mkdir -p /scripts
 RUN mkdir -p /config 
 RUN mkdir -p /defaults
 RUN mkdir -p  /etc/supervisor.d 
-#COPY root/scripts/start.sh / 
-ADD root/ /
 RUN ls -la /
 RUN chmod +x /start.sh
-RUN chmod +x scripts/start.sh    
-ENTRYPOINT [ "sh" , "/start.sh" ] 
+RUN chmod +x scripts/start.sh  
+RUN ls -la /  
+ADD root/ /
+ENTRYPOINT [ "sh" , "/start.sh" ]
