@@ -9,7 +9,7 @@ RUN mkdir -p /config
 RUN mkdir -p /defaults
 RUN mkdir -p  /etc/supervisor.d 
 #COPY root/scripts/start.sh / 
-COPY  root/ /
+ADD root/ /
 RUN ls -la /
 RUN chmod +x /start.sh
 RUN chmod +x root/scripts/start.sh    
