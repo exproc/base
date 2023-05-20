@@ -14,5 +14,6 @@ RUN chmod +x /start.sh
 RUN chmod +x scripts/start.sh  
 RUN ls -la /  
 #ADD root/ /
-ENTRYPOINT [ "sh" , "/scripts/start.sh" ]
-CMD ["/usr/bin/supervisord",  "-c", "/etc/supervisord.conf"]
+#ENTRYPOINT [ "sh" , "/scripts/start.sh" ]
+#CMD ["/usr/bin/supervisord",  "-c", "/etc/supervisord.conf"]
+ENTRYPOINT ["/init"]
